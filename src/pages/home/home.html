@@ -1,18 +1,34 @@
-<!--
-  Generated template for the HomePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>home</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
 <ion-content padding>
+
+  <div class="marco">
+
+    <ion-card>
+
+      <ion-card-header>
+        
+        <h1>Cifrado AES-256</h1>
+        
+      </ion-card-header>
+
+      <ion-card-content>
+        Apareció en la cima de varios competidores y se anunció oficialmente el nuevo estándar de cifrado AES en 2001. El algoritmo
+        se basa en varias sustituciones, permutaciones y transformaciones lineales, cada una ejecutada en bloques de datos
+        de 16 bytes - por lo tanto el término blockcipher. Esas operaciones se repiten varias veces, llamadas "rondas". Durante
+        cada ronda, una clave circular única se calcula a partir de la clave de cifrado y se incorpora en los cálculos. Basado
+        en la estructura de bloques de AES, el cambio de un solo bit, ya sea en la clave, o en el bloque de texto sin cifrado,
+        da como resultado un bloque de texto cifrado completamente diferente - una ventaja clara sobre los cifrados de flujo
+        tradicionales. La diferencia entre AES-128, AES-192 y AES-256 finalmente es la longitud de la clave: 128, 192 o 256
+        bits - todas las mejoras drásticas en comparación con la clave de 56 bits de DES. A modo de ilustración: El agrietamiento
+        de una clave AES de 128 bits con un superordenador de última generación tomaría más tiempo que la presunta edad del
+        universo. Y Boxcryptor incluso utiliza claves de 256 bits. Hasta el día de hoy, no existe un ataque factible contra
+        AES. Por lo tanto, AES sigue siendo el estándar de cifrado preferido para los gobiernos, bancos y sistemas de alta
+        seguridad en todo el mundo.
+      </ion-card-content>
+
+    </ion-card>
+
+    <button ion-button full color="danger" (click)="logout()">Cerrar sesion</button>
+
+  </div>
 
 </ion-content>

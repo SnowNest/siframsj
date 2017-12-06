@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the HomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, LoadingController } from 'ionic-angular';
+import { UsuariosProvider } from '../../providers/usuarios/usuarios';
 
 @IonicPage()
 @Component({
@@ -15,11 +9,29 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    private _usuario: UsuariosProvider,
+    private loadingCtrl: LoadingController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+  logout() {
+
+    let loading = this.loadingCtrl.create({
+
+      content: "cifrando..."
+
+    });
+
+    loading.present();
+
+    this._usuario.borrar_storage().then( () => {
+
+      window.location.reload(false);
+      loading.dismiss();
+
+    });
+
   }
 
 }

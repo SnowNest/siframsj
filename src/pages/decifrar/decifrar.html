@@ -1,0 +1,22 @@
+<ion-content padding>
+    
+      <div class="marco">
+    
+        <div padding>
+          <h1>Decifrar mensajes</h1>
+        </div>
+    
+        <ion-item>
+          <ion-label floating>Mensaje</ion-label>
+          <ion-input type="text" [(ngModel)]="mensaje"></ion-input>
+        </ion-item>
+    
+        <button ion-button full (click)="decifrar(mensaje)">Decifrar mensaje</button>
+    
+        <ion-item>
+          <ion-input type="text" [(ngModel)]="mensajedecifrado"></ion-input>
+        </ion-item>
+    
+      </div>
+    
+    </ion-content>
